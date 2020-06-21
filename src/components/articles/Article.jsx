@@ -12,7 +12,7 @@ const Article = ({ match }) => {
             .then(response => response.json())
             .then(article => setArticle(article))
             .catch(error => alert(error))
-    }, []) 
+    },) 
 
     return (
         <article className="aSingle">
