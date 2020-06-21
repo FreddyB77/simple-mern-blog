@@ -7,19 +7,19 @@ const Article = ({ match }) => {
     const [ article, setArticle ] = useState([])
     const [ aLength ] = useState(['One', 'Two'])
 
-    useEffect( () => {        
+ useEffect( () => {        
         fetch(`/articles/${match.params.articleId}`)
             .then(response => response.json())
             .then(article => setArticle(article))
             .catch(error => alert(error))
-    }, [])
+    }, []) 
 
     return (
         <article className="aSingle">
             <div> 
                 <h1 className="aSingle-title">{article && article.title}</h1>
                 <subtitle className="aSingle-subtitle">
-                    <p>By: Poe Tat Joes, Potatoe Inc.</p>
+                    <p>By: Bain Batman Vilian inc. </p>
                     <p>Updated  <i>
                         <Moment format="MMMM DD, YYYY">{Date.now()}</Moment> 
                     </i></p>
@@ -32,7 +32,7 @@ const Article = ({ match }) => {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100 aSingle-img"
-                                src="https://picsum.photos/150/150"
+                                src="https://images-na.ssl-images-amazon.com/images/I/71vH1n9k0TL._AC_SY741_.jpg"
                                 alt="First slide"
                                 />
                             <Carousel.Caption >
